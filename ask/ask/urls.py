@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from qa.views import test
+from qa.views import home_page
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', test),
+    url(r'^$', home_page),
     url(r'^login/', test),
     url(r'^signup/', test),
     url(r'^question/[\d]+/', test),

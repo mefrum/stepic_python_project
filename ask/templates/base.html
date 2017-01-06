@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Q&A{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    {% block header %}
+        <nav>
+            <h1>Q&A</h1>
+            <form action="">
+                <input type="text">
+                <input type="button" value="Search">
+            </form>
+            {% block user %}
+                <a href="../login">log in</a>
+                <a href="../signup">sing up</a>
+            {% endblock %}
+        </nav>
+    {% endblock %}
+
+    {% block content %} {% endblock %}
+    {% block tags %}{% endblock %}
+</body>
+</html>
